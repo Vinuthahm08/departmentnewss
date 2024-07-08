@@ -1,0 +1,181 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  justify-content: center;
+  text-align: center;
+}
+
+#container {
+  padding: 5px;
+  background-color: #00698f;
+  color: black;
+}
+
+#head {
+  background-color: black;
+  padding: 50px;
+
+}
+
+#image {
+  width: 100px;
+  height: 100px;
+  margin-left: 12px;
+}
+
+#headp {
+  float: right;
+  color: black;
+  margin-right: 1400px;
+  margin-top: 40px;
+}
+
+/* Style for the navigation bar */
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(243,232,24);
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  background-color: black;
+  color:rgba(243,232,24)
+}
+
+/* Style for the active link */
+.navbar li a.active {
+  background-color: black; /* Green background for the active page */
+  color: rgba(243,232,24);
+}
+
+h2 {
+  color: #00698f;
+}
+
+#header {
+  background-color: #f7f7f7;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: large;
+}
+
+.ullist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 30px;
+}
+
+.ullist li {
+  padding: 10px;
+}
+
+.ullist li:last-child {
+  border-bottom: none;
+}
+
+.ullist li::before {
+  content: '>'; /* Custom bullet content */
+  position: center;
+  left: 0;
+  color: black; /* Initial bullet color */
+  font-size: 20px; /* Bullet size */
+  line-height: 20px; /* Center bullet vertically */
+  transition: color 0.3s; /* Smooth transition for color change */
+}
+
+#results, #backresults {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+}
+
+#results a, #backresults a {
+  text-decoration: none;
+  color: #00698f;
+}
+
+#results a:hover, #backresults a:hover {
+  color: #00476f;
+}
+
+#backresults {
+  margin-top: 20px;
+}
+
+#results {
+  margin-top: 20px;
+}
+
+#table, #hall {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+#table a, #hall a, #help a {
+  text-decoration: none;
+  color: #00698f;
+  display: block;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+#table a:hover, #hall a:hover, #help a:hover {
+  color: #00476f;
+}
+
+#help {
+  border-bottom: 3px solid black;
+  text-align: center;
+  border-top: 3px solid black;
+  margin-top: 20px;
+}
+
+#footer {
+  padding: 50px;
+  background-color: black;
+  margin-top: 20px;
+  color: white;
+}
+
+/* Address formatting */
+#footer-address p {
+  margin: 5px 0;
+}
+
+@keyframes slideInFromLeft {
+  from {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+#footer-address {
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease-in-out;
+}

@@ -1,0 +1,97 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  justify-content: center;
+  text-align: center;
+}
+
+#container {
+  padding: 5px;
+  background-color: #00698f;
+  color: black;
+}
+
+#head {
+  background-color: black;
+  padding: 50px;
+}
+
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(243,232,24);
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  background-color: black;
+  color:rgba(243,232,24)
+}
+
+/* Style for the active link */
+.navbar li a.active {
+  background-color: #0a0a0a; /* Green background for the active page */
+  color: white;
+}
+
+#image {
+  width: 100px;
+  height: 100px;
+}
+
+#con1 {
+  float: right;
+  color: black;
+  margin-right: 1400px;
+  margin-top: 40px;
+}
+
+#con2 {
+  float: right;
+  margin-top: -70px;
+  margin-right: 50px;
+}
+
+#con3 {
+  float: right;
+  margin-top: -50px;
+  margin-right: 50px;
+}
+
+.ull {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 30px;
+}
+
+.ull li {
+  padding: 10px;
+}
+
+.ull li:last-child {
+  border-bottom: none;
+}
+
+.ull li::before {
+  content: '>'; /* Custom bullet content */
+  position: center;
+  left: 0;
+  color: black; /* Initial bullet color */
+  font-size: 20px; /* Bullet size */
+  line-height: 20px; /* Center bullet vertically */
+  transition: color 0.3s; /* Smooth transition for color change */
+}

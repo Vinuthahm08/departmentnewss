@@ -1,0 +1,111 @@
+  /* Add some basic styling to the page */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9; /* light gray background */
+}
+
+/* Style the container div */
+div.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff; /* white background */
+    border: 1px solid #ddd; /* light gray border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+
+/* Style the label and input fields */
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc; /* light gray border */
+}
+
+/* Style the button */
+button {
+    background-color: #4CAF50; /* green background */
+    color: #fff; /* white text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3e8e41; /* darker green on hover */
+}
+
+/* Style the exam desk section */
+div.exam-desk {
+    margin-top: 20px;
+    background-color: #f0f0f0; /* light gray background */
+    padding: 20px;
+    border: 1px solid #ddd; /* light gray border */
+}
+
+/* Style the address section */
+p.address {
+    font-size: 14px;
+    color: #666; /* dark gray text */
+}
+#container{
+padding: 5px;
+background-color: #00698f;
+color: black;
+}
+
+#head {
+background-color: black;
+padding: 50px;
+margin-top: 20px;
+
+}
+
+
+#image{
+width: 100px;
+height: 100px;
+}
+#headp{
+float: right;
+color:black;
+margin-right: 1400px;
+margin-top: 40px;
+}
+.dialogue-box {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Style the dialogue box content */
+.dialogue-content {
+    margin-bottom: 20px;
+}
+
+/* Style the dialogue box button */
+.dialogue-button {
+    background-color: #4CAF50; /* green background */
+    color: #fff; /* white text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dialogue-button:hover {
+    background-color: #3e8e41; /* darker green on hover */
+}

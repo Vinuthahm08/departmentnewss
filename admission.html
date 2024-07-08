@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission page</title>
+    <link rel="stylesheet" href="admission.css">
+</head>
+<body>
+    <div id="container">
+        <img src="th.jpeg" id="image">
+        <p id="con1">CSE NEWS BUZZ</p>
+        <p id="con2">KCET:E007</p>
+        <p id="con3">COMED-K:E040</p>
+    </div>
+    <div id="head">
+    </div>
+    <nav>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="course.html">Course</a></li>
+            <li><a href="faculty.html">Faculty</a></li>
+            <li><a class="active" href="admission.html">Admission</a></li>
+            <li><a href="exam.html">Exam</a></li>
+        </ul>
+    </nav>
+    <div>
+        <p id="con4">Admission</p>
+        <ul class="ull">
+            <li><a href="#" onclick="toggleContent('procedure')">Admission procedure</a></li>
+            <div id="procedure" class="content">
+                <p>Here you can describe the admission procedure.</p>
+            </div>
+            <li><a href="#" onclick="toggleContent('fees')">Fee structure</a></li>
+            <div id="fees" class="content">
+                <p>Here you can describe the fee structure.</p>
+            </div>
+        </ul>
+        
+        
+    </div>
+
+    <script src="admission.js"></script>
+</body>
+</html>
