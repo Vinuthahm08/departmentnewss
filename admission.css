@@ -43,7 +43,7 @@ body {
 
 /* Style for the active link */
 .navbar li a.active {
-  background-color: #0a0a0a; /* Green background for the active page */
+  background-color: #0a0a0a; 
   color: white;
 }
 
@@ -94,4 +94,38 @@ body {
   font-size: 20px; /* Bullet size */
   line-height: 20px; /* Center bullet vertically */
   transition: color 0.3s; /* Smooth transition for color change */
+}
+/* Your existing CSS styles */
+
+.content {
+  display: none; /* Initially hide all content */
+}
+
+.active-content {
+  display: block; /* Show active content */
+}
+
+#content {
+  width: 700px;
+  margin: 0 auto;  /* This centers the p element horizontally within its parent */
+  text-align: center;  /* This centers the text within the p element */
+  display: flex;  /* This sets the display property to flex for the p element */
+  justify-content: center;  /* This centers the content horizontally within the p element */
+  align-items: center;
+  margin-top: 20px;  /* This centers the content vertically within the p element */
+}
+
+#con4{
+  font-weight: bolder;
+  margin-top: 20px;
+}
+
+#footer {
+  padding: 50px;
+  background-color: black;
+  margin-top: 20px;
+  color: white;
+}
+#footer-address p {
+  margin: 5px 0;
 }

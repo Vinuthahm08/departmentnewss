@@ -123,7 +123,17 @@ h2 {
 #results {
   margin-top: 20px;
 }
+#con2 {
+  float: right;
+  margin-top: -70px;
+  margin-right: 50px;
+}
 
+#con3 {
+  float: right;
+  margin-top: -50px;
+  margin-right: 50px;
+}
 #table, #hall {
   background-color: #f7f7f7;
   padding: 20px;

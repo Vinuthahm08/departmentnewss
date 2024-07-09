@@ -1,46 +1,39 @@
-const express = require('express');
-const MongoClient = require('mongodb').MongoClient;
-const bodyParser = require('body-parser');
+<?php
+// Assuming your PHP script starts here
 
-const app = express();
-const port = 8080;
-const mongoUrl = ("mongodb://localhost:27017/exam");
-const dbName = 'exam';  // Replace with your actual database name
+// Connection parameters for MySQL (adjust as per your MySQL setup)
+$servername = "localhost";
+$username = "root"; // Default username for XAMPP MySQL
+$password = ""; // Default password for XAMPP MySQL
+$dbname = "exam"; // Name of your MySQL database
 
-// Middleware to parse JSON request bodies
-app.use(bodyParser.json());
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-// Serve files from the public directory
-app.use(express.static('public'));
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
-// Connect to MongoDB
-MongoClient.connect(mongoUrl, (err, client) => {
-  if (err) {
-    console.error(err);
-  } else {
-    console.log('Connected to MongoDB');
+// Handle form submission (POST request)
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $usn = $_POST['usn']; // Assuming your form input name is 'usn'
 
-    const db = client.db(dbName);
-    const collection = db.collection('exam');
+    // Query to retrieve CGPA from MySQL database
+    $sql = "SELECT cgpa FROM dsce WHERE usn = '$usn'";
+    $result = $conn->query($sql);
 
-    // Handle submit button click
-    app.post('/submit', (req, res) => {
-      const usn = req.body.usn;
-
-      // Find data in MongoDB
-      collection.find({ usn: usn }).toArray((err, data) => {
-        if (err) {
-          console.error(err);
-          res.status(500).send('Internal Server Error');
-        } else {
-          res.json(data);
+    if ($result->num_rows > 0) {
+        // Output data of each row
+        while($row = $result->fetch_assoc()) {
+            $cgpa = $row["cgpa"];
+            echo "CGPA for $usn: $cgpa";
         }
-      });
-    });
+    } else {
+        echo "No results found for the given USN";
+    }
+}
 
-    // Start the express web server
-    app.listen(port, () => {
-      console.log(`Server is listening on port ${port}`);
-    });
-  }
-});
+// Close MySQL connection
+$conn->close();
+?>

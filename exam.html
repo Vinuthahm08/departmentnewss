@@ -11,6 +11,10 @@
     <div id="container">
         <img src="th.jpeg" alt="Header Image" id="image">
         <p id="headp">CSE NEWS BUZZ</p>
+      
+        <p id="con2">KCET:E007</p>
+        <p id="con3">COMED-K:E040</p>
+    </div>
     </div>
     <div id="head"></div>
     <ul class="navbar">
@@ -43,31 +47,11 @@
         </ul>
     </div>
 
-    <div id="results">
-        <p>RESULTS</p><br>
-        <a href="1stsemresults.html" id="one">1st and 2nd sem results</a><br>
-        <a href="3rdsemresults.html" id="three">3rd and 4th sem results</a><br>
-        <a href="5thsemresults.html" id="five">5th and 6th sem results</a><br>
-        <a href="7thsemresults.html" id="seven">7th and 8th sem results</a><br>
-    </div>
-
-    <div id="backresults">
-        <p>BACKLOG RESULTS</p><br>
-        <a href="1stsemresults.html" id="two">1st and 2nd sem results</a><br>
-        <a href="3rdsemresults.html" id="four">3rd and 4th sem results</a><br>
-        <a href="5thsemresults.html" id="six">5th and 6th sem results</a><br>
-        <a href="7thsemresults.html" id="eight">7th and 8th sem results</a><br>
-    </div>
-
-    <div id="table">
-        <p>TIME TABLE update</p><br>
-        <a href="table.html">time table</a>
-    </div>
-
-    <div id="hall">
-        <p>HALL allotment</p><br>
-        <a href="allotment.html">hall allotment</a><br>
-    </div>
+    <form id="examForm" action="/submit" method="POST">
+        <label for="usn">USN:</label>
+        <input type="text" id="usn" name="usn" required>
+        <button type="submit" id="submitButton">Submit</button>
+    </form>
 
     <div id="footer">
         <div id="footer-address">
@@ -80,6 +64,12 @@
             <p>Contact No: 080 - 42161770</p>
         </div>
     </div>
+    <form>
+        <label for="usn">Enter USN:</label>
+        <input type="text" id="usn" name="usn">
+        <button type="submit">Submit</button>
+    </form>
+    
 
     <script src="exam.js"></script>
 </body>
