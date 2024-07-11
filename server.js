@@ -1,39 +1,46 @@
-<?php
-// Assuming your PHP script starts here
+// server.js
+const express = require("express");
+const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+const path = require("path");
+const port = 5001;
 
-// Connection parameters for MySQL (adjust as per your MySQL setup)
-$servername = "localhost";
-$username = "root"; // Default username for XAMPP MySQL
-$password = ""; // Default password for XAMPP MySQL
-$dbname = "exam"; // Name of your MySQL database
+const app = express();
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+//middlware
+app.use(bodyParser.json());
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+app.use(express.static('public'));
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 
-// Handle form submission (POST request)
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $usn = $_POST['usn']; // Assuming your form input name is 'usn'
+// Connect to MongoDB
+const mongourl='mongodb://localhost:27017/exam';
 
-    // Query to retrieve CGPA from MySQL database
-    $sql = "SELECT cgpa FROM dsce WHERE usn = '$usn'";
-    $result = $conn->query($sql);
+//connect to mongodb using mongoose
+mongoose.connect(mongourl)
+.then(() => console.log("Connected to MongoDB"));
 
-    if ($result->num_rows > 0) {
-        // Output data of each row
-        while($row = $result->fetch_assoc()) {
-            $cgpa = $row["cgpa"];
-            echo "CGPA for $usn: $cgpa";
-        }
-    } else {
-        echo "No results found for the given USN";
-    }
-}
+//example route
 
-// Close MySQL connection
-$conn->close();
-?>
+
+
+var db = mongoose.connection;
+db.on('error', () => console.log("error in connecting to database"));
+db.once('open', () => console.log("connected to database"));
+
+// Set the view engine to EJS
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+// Routes
+const indexRoutes = require('./routes/result');
+app.use('/result', indexRoutes);
+
+
+// Start the server
+
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
+});

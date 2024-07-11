@@ -1,131 +1,135 @@
+
 body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
-  justify-content: center;
+  background-color: #280054;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
 #container {
-  padding: 5px;
-  background-color: #00698f;
-  color: black;
-}
-
-#head {
-  background-color: black;
-  padding: 50px;
-}
-
-.navbar {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: rgba(243,232,24);
-}
-
-.navbar li {
-  float: left;
-}
-
-.navbar li a {
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.navbar li a:hover {
-  background-color: black;
-  color:rgba(243,232,24)
-}
-
-/* Style for the active link */
-.navbar li a.active {
-  background-color: #0a0a0a; 
-  color: white;
+  background-color: #280054;
+  width: 100%;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #image {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
 }
 
-#con1 {
-  float: right;
-  color: black;
-  margin-right: 1400px;
-  margin-top: 40px;
+#headp {
+  font-size: 148px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 20px; /* Increased margin-top */
+  margin-bottom: 20px; /* Added margin-bottom for extra space */
+  position: absolute;
+  white-space: nowrap;
+  animation: moveAcross 20s linear infinite;
+  color:#280054
 }
 
-#con2 {
-  float: right;
-  margin-top: -70px;
-  margin-right: 50px;
+@keyframes moveAcross {
+  0% { left: -100%; }
+  50% { left: 100%; }
+  100% { left: -100%; }
+}
+#con1, #con2, #con3 {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 5px 0;
 }
 
-#con3 {
-  float: right;
-  margin-top: -50px;
-  margin-right: 50px;
-}
-
-.ull {
+.navbar {
+  background-color: #000000;
+  padding: 15px 0;
   list-style: none;
-  padding: 0;
   margin: 0;
-  margin-top: 30px;
-}
-
-.ull li {
-  padding: 10px;
-}
-
-.ull li:last-child {
-  border-bottom: none;
-}
-
-.ull li::before {
-  content: '>'; /* Custom bullet content */
-  position: center;
-  left: 0;
-  color: black; /* Initial bullet color */
-  font-size: 20px; /* Bullet size */
-  line-height: 20px; /* Center bullet vertically */
-  transition: color 0.3s; /* Smooth transition for color change */
-}
-/* Your existing CSS styles */
-
-.content {
-  display: none; /* Initially hide all content */
-}
-
-.active-content {
-  display: block; /* Show active content */
-}
-
-#content {
-  width: 700px;
-  margin: 0 auto;  /* This centers the p element horizontally within its parent */
-  text-align: center;  /* This centers the text within the p element */
-  display: flex;  /* This sets the display property to flex for the p element */
-  justify-content: center;  /* This centers the content horizontally within the p element */
+  display: flex;
+  justify-content: center;
   align-items: center;
-  margin-top: 20px;  /* This centers the content vertically within the p element */
 }
 
-#con4{
-  font-weight: bolder;
-  margin-top: 20px;
+.navbar li {
+  margin: 0 20px;
 }
 
-#footer {
-  padding: 50px;
-  background-color: black;
-  margin-top: 20px;
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #472781;
+  font-size: 30px;
+}
+
+
+.navbar a.active {
+  color: #472781;
+  
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: bold;
+  margin: 30px 0;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 0 0 10px rgba(240, 82, 228, 0.8); /* Glowing effect */
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+#admission, #eligibility {
+  width: 60%;
+  margin: 0 auto 30px; /* Center and add bottom margin */
+  padding: 20px;
+  background-color:#1E1136; /* Highlight color */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px #030005; /* Soft shadow */
+  text-align: left; /* Align text left */
+}
+
+#admission h3, #eligibility h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
   color: white;
 }
+
+#admission p, #eligibility p {
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center; /* Center align paragraphs */
+}
+#footer {
+  background-color: #000000;
+  padding: 20px;
+  text-align: center; /* Center align text */
+}
+
 #footer-address p {
-  margin: 5px 0;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgba(240, 82, 228, 0.8);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(240, 82, 228, 0.9);
+  }
 }
