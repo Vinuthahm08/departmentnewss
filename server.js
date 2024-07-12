@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const path = require("path");
 const port = 5001;
 
+
 const app = express();
 
 //middlware
@@ -44,3 +45,5 @@ app.use('/result', indexRoutes);
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
+
+

@@ -1,65 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exam Results</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #280054;
-            color: white;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-
-        h1 {
-            font-size: 36px;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 20px auto;
-            width: 70%;
-            text-align: left;
-        }
-
-        ul li {
-            background-color: #1E1136;
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-        }
-
-        ul li:last-child {
-            margin-bottom: 0;
-        }
-
-        a {
-            display: block;
-            margin-top: 20px;
-            color: #cb52f0;
-            text-decoration: none;
-            font-size: 18px;
-            transition: color 0.3s;
-        }
-
-        a:hover {
-            color: #F052E4;
-        }
-    </style>
+  <title>Exam Results</title>
 </head>
 <body>
-    <h1>Exam Results</h1>
+  <h1>Exam Results</h1>
+  <% if (results.length > 0) { %>
     <ul>
-        <% results.forEach(result => { %>
-            <li>Name: <%= result.name %>, USN: <%= result.usn %>, CGPA: <%= result.cgpa %></li>
-        <% }); %>
+      <% results.forEach(result => { %>
+        <li><%= result.name %>: CGPA <%= result.cgpa %></li>
+      <% }) %>
     </ul>
-    <a href="/exam.html">Back to Exam Page</a>
+  <% } else { %>
+    <p>No results found for the provided USN.</p>
+  <% } %>
 </body>
 </html>

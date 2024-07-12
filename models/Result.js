@@ -6,10 +6,10 @@ const resultSchema = new mongoose.Schema({
     name: String,
     cgpa: Number
 },{
-    collection:'result'
+    collection:'Result'
 });
 
-const User = mongoose.model('result', resultSchema);
+
 //users is collection here
 
-module.exports = User;
+module.exports = mongoose.model('Result', resultSchema);
